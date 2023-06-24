@@ -57,12 +57,15 @@
         </div>
     </div>
 
-    <button class="reset">Reiniciar o Jogo</button>
+    <button class="reset" onclick="reset(event)">Reiniciar o Jogo</button>
     
     <script>
+        function reset(event){
+    location.reload();
+        }
         function allowDrop(event) {
             event.preventDefault();
-         }
+        }
 
         function drag(event) {
             event.dataTransfer.setData("text", event.target.id);
